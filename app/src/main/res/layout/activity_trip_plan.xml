@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TripPlanActivity"
+    android:orientation="vertical"
+    android:background="@color/appBackground">
+
+    <TextView
+        android:id="@+id/title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Trip Plans"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:padding="10sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="*Long press trip plan to delete it*"
+        android:textAlignment="center"
+        android:textSize="15sp" />
+    <ListView
+        android:id="@+id/tripPlanListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <EditText
+        android:id="@+id/newTripPlanEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Add a new trip plan to the list"/>
+
+    <Button
+        android:id="@+id/addTripPlanButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:text="Add"
+        android:onClick="saveToFirebase"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/travelBudTheme"/>
+
+</LinearLayout>

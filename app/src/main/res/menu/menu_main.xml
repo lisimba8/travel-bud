@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:support="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.coursework1.HomePageActivity">
+    <item
+        android:id="@+id/action_open_user_guide"
+        android:orderInCategory="100"
+        android:title="@string/action_open_user_guide"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_item_share"
+        android:title="Share"
+        app:actionProviderClass="androidx.appcompat.widget.ShareActionProvider"
+        app:showAsAction="never" />
+
+</menu>

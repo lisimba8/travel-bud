@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackground">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TripViewActivity">
+
+<!--    used to keep trip ID-->
+    <TextView
+        android:id="@+id/tripId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tripDestinationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Trip Name"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:id="@+id/tripDateLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tripDestinationTextView"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/startTripDateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Trip Date"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="-"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/endTripDateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Trip Date"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/shareButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tripDateLinearLayout"
+        android:layout_marginStart="18dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@+id/tripDateLinearLayout"
+        android:backgroundTint="@color/travelBudTheme"
+        android:elevation="10dp"
+        android:src="@drawable/share_button" />
+
+    <ImageView
+        android:id="@+id/tripImageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/tripDateLinearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/travelbud_icon"
+        android:background="@null" />
+
+    <Button
+        android:id="@+id/viewTripPlansButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tripImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:padding="20dp"
+        android:text="View Trip Plans"
+        android:onClick="viewTripPlans"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/travelBudTheme"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewTripPlansButton"
+        android:text="*Internet required to view trip plans*"
+        android:id="@+id/internetRequiredTextView"
+        android:layout_centerHorizontal="true"
+        android:textSize="10sp" />
+
+    <CheckBox
+        android:id="@+id/book_transport_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/internetRequiredTextView"
+        android:layout_marginLeft="20dp"
+        android:text="Book Transport"
+        android:onClick="updateCheckedValues"/>
+    <CheckBox
+        android:id="@+id/book_accommodation_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/book_transport_checkbox"
+        android:layout_marginLeft="20dp"
+        android:text="Book Accomodation"
+        android:onClick="updateCheckedValues"/>
+    <CheckBox
+        android:id="@+id/pack_clothes_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/book_accommodation_checkbox"
+        android:layout_marginLeft="20dp"
+        android:text="Pack Clothes"
+        android:onClick="updateCheckedValues"/>
+
+    <LinearLayout
+        android:id="@+id/budgetOfTripLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pack_clothes_checkbox"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/budgetOfTripTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Budget of the trip:"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tripBudgetTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:text="Trip Budget"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/accommodationOfTripLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/budgetOfTripLinearLayout"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/accommodationOfTripTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Accomodation of the trip:"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/accommodationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Trip Accommodation"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/transportOfTripLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/accommodationOfTripLinearLayout"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/transportOfTripTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Transport of the trip:"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/transportTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:text="Trip transport"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/viewTripOnMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/transportOfTripLinearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="20dp"
+        android:text="View Destination on map"
+        android:onClick="sendToMaps"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/travelBudTheme"/>
+
+    <Button
+        android:id="@+id/deleteTrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewTripOnMap"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="20dp"
+        android:text="Delete Trip"
+        android:onClick="deleteTrip"
+        android:textColor="@color/white"
+        android:backgroundTint="#FF5F5F"/>
+
+</RelativeLayout>
+</ScrollView>

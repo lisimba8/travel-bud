@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    tools:context="com."
+    android:background="@color/appBackground">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:id="@+id/header">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/displayNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/header"
+        android:text="Hello Name!"
+        android:textSize="30sp"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/here_are_planned_trips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/displayNameTextView"
+        android:layout_centerHorizontal="true"
+        android:text="@string/here_are_planned_trips"
+        android:textSize="20dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="invisible"/> <!-- set to invisible -->
+
+    <TextView
+        android:id="@+id/noTripsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/displayNameTextView"
+        android:layout_centerHorizontal="true"
+        android:text="@string/no_trips_message"
+        android:textSize="30sp"
+        android:layout_marginTop="20dp"
+        android:padding="20dp"
+        android:visibility="visible" /><!-- set to visible -->
+
+    <ListView
+        android:id="@+id/tripListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/here_are_planned_trips"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:divider="@null"
+        android:dividerHeight="5dp"
+        android:visibility="invisible" /> <!-- set to invisible -->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addTripButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginStart="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="28dp"
+        android:src="@drawable/add_icon"
+        android:backgroundTint="@color/add_trip_button_colour"/>
+
+</RelativeLayout>

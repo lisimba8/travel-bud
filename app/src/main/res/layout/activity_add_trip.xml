@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackground">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        tools:context=".AddTripActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Enter Trip details and click\n the Add Trip button at the bottom\nof the page."
+            android:gravity="center"
+            android:paddingTop="16dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/card_bg">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="20sp"
+                android:text="Where are you going?" />
+
+            <EditText
+                android:id="@+id/destination_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your destination city"
+                android:inputType="text"
+                android:maxLines="1"
+                android:minHeight="48dp"
+                android:singleLine="true" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/card_bg">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            android:text="Select destination country" />
+
+        <Spinner
+            android:id="@+id/destination_country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/country_array"
+            android:minHeight="48dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/card_bg">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            android:text="How will you get there?" />
+
+        <Spinner
+            android:id="@+id/transport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/transportation"
+            android:minHeight="48dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/card_bg">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            android:text="Where are you going to stay?" />
+
+        <EditText
+            android:id="@+id/accomodation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter details of your accomodation"
+            android:inputType="text"
+            android:maxLines="1"
+            android:minHeight="48dp"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/card_bg">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            android:text="What is your budget?" />
+
+        <EditText
+            android:id="@+id/budget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your budget ($)"
+            android:inputType="number"
+            android:maxLines="1"
+            android:minHeight="48dp"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp"
+        android:padding="15dp"
+        android:background="@drawable/card_bg">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            android:text="When does the trip start?" />
+
+        <DatePicker
+            android:id="@+id/startDatePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp"
+        android:padding="15dp"
+        android:background="@drawable/card_bg">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            android:text="When does the trip end?" />
+
+        <DatePicker
+            android:id="@+id/endDatePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"/>
+
+    </LinearLayout>
+
+
+        <Button
+            android:id="@+id/button_add_trip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="16dp"
+            android:text="Add Trip"
+            android:onClick="addTrip"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/travelBudTheme"
+            />
+
+    </LinearLayout>
+</ScrollView>

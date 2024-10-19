@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TravelBud User Guide</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <button id="toggle-nav-bar">Toggle Nav Bar</button>
+
+    <nav id="myNavBar">
+      <ul>
+        <li><a href="#travelbud-guide">Start up page</a></li>
+        <li><a href="#home-page">Home page</a></li>
+        <li><a href="#add-trip-page">Add trip page</a></li>
+        <li><a href="#trip-details-page">Trip details page</a></li>
+        <li><a href="#trip-plans-page">Trip plans page</a></li>
+        <li><a href="#settings-page">Settings page</a></li>
+      </ul>
+    </nav>
+
+
+    <div class="container">
+      <div class="main">
+        <h1 id="travelbud-guide">TravelBud Guide</h1>
+        <p>
+          TravelBud is a travel compnanion app that helps users to plan their
+          trips before they go, allowing them to focus on the fun.
+        </p>
+
+        <img src="images/travelbud.png" alt="travelbud app logo" />
+
+        <h2>How TravelBud Works</h2>
+        <p>
+          The app allows you to keep track of all your planned trips, with a
+          clean, user friendly and intuitive design. You are able to enter
+          specific details about your trip, such as the destination, the date of
+          travel, accommodation, budget and so on. For each trip, you can also
+          enter details about the activities you will do each day of your trip.
+          This app also provides users with a checklist on what you need to do
+          before you travel allowing you to easily keep track of this. This app
+          therefore helps you adequately prepare for your next trip. It also
+          removes the hassle of keeping track of trip requirements.
+        </p>
+
+        <h2 id = "start-up-page">Start up page</h2>
+        <p>
+          On start-up, you will be prompted to set up the app by entering your
+          name and country of residence. This information will be stored in
+          local storage and can be accessed and edited at any time from your
+          settings.
+        </p>
+
+        <img src="images/start-page.png" alt="Start up page" />
+
+        <h2 id="home-page">Home page</h2>
+        <p>
+          Once you have set up the app, you will be taken to the home page,
+          where you can see all your trips. This page shows trip information
+          such as the trip name and trip dates. You can also add a new trip by
+          clicking on the "Add Trip" button shown as a '+' button on the bottom
+          right of the screen (see image for reference).
+        </p>
+
+        <img src="images/home-page.png" alt="Home page" />
+
+        <h2 id="add-trip-page">Add trip page</h2>
+        <p>
+          Once you click on the add trip button, you will be taken to a page
+          where you can add trips. From there you can go on to create trips, and
+          add the details about each trip, which will then be stored in local
+          storage. Please see image for reference.
+        </p>
+
+        <img src="images/add-trip.png" alt="Add trip page" />
+
+        <h2 id="trip-details-page">Trip details page</h2>
+        <p>
+          Once you have added a trip, you will be taken back to the home page
+          where you can see the trip you have just added. You can click on the
+          view trip details button trip to view the details of the trip. This
+          takes you to a page where you can see all the details of the trip. And
+          it includes a checklist for the trip, which is all the things you need
+          to do before you travel. On this page, you can also share the trip
+          details with other users which allows you to inform them that you are
+          leaving on that particular trip. You can also click view destination
+          on map which opens google maps and shows you the location of the
+          destination. You can also click view trip plans button which would
+          take you to a page where you can see all the activities you have
+          planned for that trip. At the bottom of the page, there is a button that
+          allows you to delete the trip. This page requires internet to get the complete
+          functionality out of it and be able to save the trip checklist and
+          trip plans from the trip plan page as well. The page also shows an image
+          of the destination country.
+        </p>
+
+        <img src="images/trip-details.png" alt="Trip details page" />
+
+        <h2 id="trip-plans-page">Trip plans page</h2>
+        <p>
+          On the Trip plans, you can add and delete trip plans for the trip.
+          Clicking and holding a trip plan will delete it from the list. These
+          trip plan details are stored using Firebase and therefore will require
+          the user to connect to the internet at some point to be able to save
+          the trip plans. However, Firebase does keep the changes in cache and
+          will save them later if an internet connection is not currently
+          available.
+        </p>
+
+        <img src="images/trip-plans.png" alt="Trip plans page" />
+        <h2 id="settings-page">Settings page</h2>
+        <p>
+          Back on the home screen, there is a menu where you can access the
+          settings page, this user guide and share information about the app
+          with other users. On the settings page, you can edit your name and
+          country of residence. This information is stored in local storage
+          using shared preferences and can be accessed at any time. The share
+          button allows you to share information about the app with other users
+          in different ways. Please see images below to see how this menu and
+          the settings page look.
+        </p>
+
+        <div class="settings-and-menu">
+          <img src="images/menu.png" alt="Menu" />
+          <img src="images/settings.png" alt="Settings page" />
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

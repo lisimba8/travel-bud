@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="myView">
+        <attr name="diameter" format="integer"/>
+        <attr name="fontsize" format="float"/>
+        <attr name="text" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="tripView">
+        <attr name="tripDestination" format="string"/>
+        <attr name="tripDates" format="string"/>
+        <attr name="tripId" format="string"/>
+    </declare-styleable>
+</resources>

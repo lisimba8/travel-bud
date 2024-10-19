@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" /> <!-- Required for the notification service on android 13 -->
+    <permission
+        android:name="com.example.coursework1.TripDetailsContentProviderPermission"
+        android:label="TripDetailsContentProviderPermission"
+        android:protectionLevel="normal" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/travelbud_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="31">
+        <activity
+            android:name=".UserGuideActivity"
+            android:exported="false"
+            android:parentActivityName=".HomePageActivity"/>
+        <activity
+            android:name=".TripPlanActivity"
+            android:exported="true" />
+        <activity
+            android:name=".TripViewActivity"
+            android:exported="true"
+            android:parentActivityName=".HomePageActivity" />
+        <activity
+            android:name=".AddTripActivity"
+            android:parentActivityName=".HomePageActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HomePageActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Settings"
+            android:parentActivityName=".HomePageActivity" />
+
+        <provider
+            android:name=".data.TripDetailsContentProvider"
+            android:authorities="com.example.coursework1"
+            android:enabled="true" />
+
+        <service
+            android:name=".service.TripDetailsService"
+            android:exported="false" />
+
+        <receiver
+            android:name=".AlarmReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.ALARM" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
