@@ -164,7 +164,7 @@ public class TripDetailsService extends IntentService {
         try {
             conn = (HttpURLConnection) request.openConnection();
             conn.setRequestMethod("GET");
-            conn.setRequestProperty ("Authorization", "Qy8zbazFX7lTnLkhNL3JxAvuzIJvREE7uNtTKm5SSjytNQgkLmjkDKjX");
+            conn.setRequestProperty ("Authorization", "add_auth_token");
 
             conn.connect();
             is = conn.getInputStream();
